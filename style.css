@@ -4,14 +4,7 @@
     #a00f0f,
     #600f0f 10%,
     #a00f0f 20%,
-    #600f0f 30%,
-    #a00f0f 40%,
-    #600f0f 50%,
-    #a00f0f 60%,
-    #600f0f 70%,
-    #a00f0f 80%,
-    #600f0f 90%,
-    #a00f0f 100%,
+
     transparent 1px,
     transparent 2px
   );
@@ -27,6 +20,7 @@
 body {
   margin: 0;
   background: #111;
+  overflow-x: hidden;
 }
 
 .stage {
@@ -40,6 +34,7 @@ body {
     margin-top: 4em;
   }
 }
+
 .frame {
   width: 100%;
   height: 480px;
@@ -48,45 +43,83 @@ body {
   overflow: hidden;
 }
 
+.floor {
+  transform: matrix3d(1.2, 0, 0, 0, 0, 0.368998, 0, -0.001, 0, 0, 1, 0, 0, 0, 0, 1 );
+  background: repeating-linear-gradient(
+    -90deg,
+    #807031,
+    #c69952 5%
+  );
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  top: 280px;
+}
+
 .curtain {
+  display: none;
   height: 480px;
   background: var(--color-curtain);
   position: absolute;
   top: 0;
   z-index: 1;
 }
+
 .curtain--left {
   left: 0;
   width: 50%;
+  animation: slideLeft 3s linear 3s;
+}
+
+/* animation to slide curtain 100% to the left */
+@keyframes slideLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
 
 .curtain--right {
   width: 50%;
   right: 0;
+  animation: slideRight 3s linear 3s;
+}
+
+/* animation to slide curtain 100% to the right */
+@keyframes slideRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
 }
 
 .chairs {
   transform: matrix3d(
-    0.642407,
-    0.000238614,
+    .9,
     0,
-    0.0000132563,
-    -0.218915,
-    0.368998,
     0,
-    -0.000658303,
+    0,
+    0,
+    .7,
+    0,
+    -0.0005,
     0,
     0,
     1,
     0,
-    112,
-    18,
+    0,
+    0,
     0,
     1
   );
+  width: 100%;
+  height: 320px;
+  top: 0;
   position: absolute;
-  top: 120px;
-  left: 20px;
   z-index: 2;
 }
 
