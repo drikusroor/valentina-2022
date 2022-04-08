@@ -38,4 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
     rotateChairEmoji(chair);
   });
 
+  const curtains = document.querySelectorAll(".curtain");
+  const dancer = document.querySelector(".dancer-container");
+
+  const audio = document.querySelector("audio");
+
+  audio.addEventListener("play", () => {
+    // set animation to play
+    curtains.forEach((curtain) => {
+      curtain.style.animationPlayState = "running";
+    });
+
+    // set dancer to play
+    dancer.style.animationPlayState = "running";
+  });
+
+  audio.addEventListener("pause", () => {
+    // set animation to pause
+    curtains.forEach((curtain) => {
+      curtain.style.animationPlayState = "paused";
+    });
+
+    // set dancer to pause
+    dancer.style.animationPlayState = "paused";
+  });
 });

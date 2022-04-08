@@ -56,10 +56,11 @@ audio {
   width: 256px;
   height: 256px;
   animation: move-dancer-container ease-in-out 7s 1 3s forwards,
-    rotate-dancer-container ease-in-out 2s 2 10s,
-    jump-dancer-container ease-in-out 2s 1 12s,
-    move-left-dancer-container ease-in-out 0.5s 1 14s,
-    idle-dancer-container ease-in-out 3s infinite 14.5s;
+  rotate-dancer-container ease-in-out 2s 2 10s,
+  jump-dancer-container ease-in-out 2s 1 12s,
+  move-left-dancer-container ease-in-out 0.5s 1 14s,
+  idle-dancer-container ease-in-out 3s infinite 14.5s;
+  animation-play-state: paused;ß
 }
 
 @keyframes move-dancer-container {
@@ -201,6 +202,7 @@ audio {
   left: 0;
   width: 50%;
   animation: slideLeft linear 3s 3s 1 forwards;
+  animation-play-state: paused;
 }
 
 /* animation to slide curtain 100% to the left */
@@ -216,7 +218,9 @@ audio {
 .curtain--right {
   width: 50%;
   right: 0;
+  animation-play-state: paused;
   animation: slideRight linear 3s 3s 1 forwards;
+  animation-play-state: paused;
 }
 
 /* animation to slide curtain 100% to the right */
