@@ -84,11 +84,14 @@ body {
   from {
     transform: rotateY(180deg);
   }
-  50% {
+  33% {
     transform: rotateY(0deg);
   }
-  to {
+  66% {
     transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
 
