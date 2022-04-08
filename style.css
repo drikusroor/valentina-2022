@@ -103,8 +103,8 @@ body {
   border-top-right-radius: 50%;
 }
 
-.chair::before {
-  content: "🥰";
+.chair:before {
+  content: var(--content, "lolz");
   position: absolute;
   top: -75px;
   left: 40px;
