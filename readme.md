@@ -2,6 +2,8 @@
 
 Ballet animation + music to introduce a buppon (ballet coupon) 
 
+![Screenshot of animation](screenshot.png)
+
 ## How to run
 
 Make sure you have installed Node.js
