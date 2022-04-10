@@ -203,7 +203,7 @@ audio {
   height: 200px;
   background: black;
   background-size: cover;
-  background-image: url("buppo-head.png");
+  background-image: url("../images/buppo-head.png");
   background-position: center;
   display: flex;
   flex-direction: column;
