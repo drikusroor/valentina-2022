@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'RubikMoonrocks-Regular';
-  src: url('../fonts/RubikMoonrocks-Regular.ttf');
+  font-family: "RubikMoonrocks-Regular";
+  src: url("../fonts/RubikMoonrocks-Regular.ttf");
 }
 
 :root {
@@ -215,7 +215,7 @@ audio {
   left: calc(50% - 180px);
   z-index: 1;
   transform: rotate(2.5deg);
-  animation: slide-buppon-down ease-out 5s 15s forwards; 
+  animation: slide-buppon-down ease-out 5s 15s forwards;
 }
 
 @keyframes slide-buppon-down {
@@ -224,7 +224,7 @@ audio {
   }
   100% {
     top: 20px;
-  }  
+  }
 }
 
 .buppon::before {
@@ -255,8 +255,9 @@ audio {
   z-index: -1;
 }
 
-.buppon h1, .buppon h2 {
-  padding: .25em;
+.buppon h1,
+.buppon h2 {
+  padding: 0.25em;
   margin: 0;
 }
 
@@ -282,6 +283,8 @@ audio {
   }
   100% {
     left: -100%;
+    transform: skewX(-10deg);
+    box-shadow: 50px 0px 0 0px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -300,6 +303,8 @@ audio {
   }
   100% {
     right: -100%;
+    transform: skewX(10deg);
+    box-shadow: -50px 0px 0 0px rgba(0, 0, 0, 0.3);
   }
 }
 
