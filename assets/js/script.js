@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const curtains = document.querySelectorAll(".curtain");
   const dancer = document.querySelector(".dancer-container");
-
+  const buppon = document.querySelector(".buppon");
   const audio = document.querySelector("audio");
 
   audio.addEventListener("play", () => {
@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // set dancer to play
     dancer.style.animationPlayState = "running";
+
+    // set buppon to play
+    buppon.style.animationPlayState = "running";
   });
 
   audio.addEventListener("pause", () => {
@@ -61,5 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // set dancer to pause
     dancer.style.animationPlayState = "paused";
+
+    // set buppon to pause
+    buppon.style.animationPlayState = "paused";
   });
 });
